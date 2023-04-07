@@ -1,16 +1,9 @@
-/*
- * $Id$
- *
- * Copyright &copy; 1999-2022, i:FAO AG. All rights reserved.
- * www.ifao.net
- */
-
-
 package com.camtest.backend.testapi.controller;
 
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,6 +20,7 @@ public class AllControllers
 
     @GetMapping("/users")
     @ResponseBody
+    @CrossOrigin(origins = "https://gentle-coast-02a43f403.2.azurestaticapps.net")
     public String getUsers(HttpServletResponse response)
     {
         response.setContentType("application/json");
@@ -39,6 +33,7 @@ public class AllControllers
     
     @GetMapping("/systems")
     @ResponseBody
+    @CrossOrigin(origins = "https://gentle-coast-02a43f403.2.azurestaticapps.net")
     public String getSystems(HttpServletResponse response)
     {
         response.setContentType("application/json");
